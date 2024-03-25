@@ -85,7 +85,7 @@ func main() {
 	http.HandleFunc("/get-current", getCurrentHandler)
 
 	rClient = redis.NewClient(&redis.Options{
-		Addr:     "host.docker.internal:6379",
+		Addr:     "db:6379",
 		Password: "",
 		DB:       0,
 	})
